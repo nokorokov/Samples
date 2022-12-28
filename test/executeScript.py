@@ -2,8 +2,8 @@ import math
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.select import Select
 
+browser = webdriver.Chrome()
 
 def calc(x):
     return str(math.log(abs(12*math.sin(int(x)))))
@@ -11,7 +11,6 @@ def calc(x):
 try:
     #переходим на нужную нам страницу
     link = "http://SunInJuly.github.io/execute_script.html"
-    browser = webdriver.Chrome()
     browser.get(link)
 
     #находим елемент х и расчитываем его

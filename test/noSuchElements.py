@@ -1,11 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+browser = webdriver.Chrome()
 
-link = "http://suninjuly.github.io/registration1.html"
+
 
 try:
-    browser = webdriver.Chrome()
+    link = "http://suninjuly.github.io/registration1.html"
     browser.get(link)
 
     button = browser.find_element(By.XPATH, "//input[@placeholder='Input your first name']")

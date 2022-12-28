@@ -2,10 +2,10 @@ import os
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+browser = webdriver.Chrome()
 
 try:
     link = 'http://suninjuly.github.io/file_input.html'
-    browser = webdriver.Chrome()
     browser.get(link)
 
     namefield = browser.find_element(By.NAME, 'firstname')

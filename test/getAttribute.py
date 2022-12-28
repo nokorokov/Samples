@@ -2,16 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import math
-def calc(x):
-    return str(math.log(abs(12*math.sin(int(x)))))
+browser = webdriver.Chrome()
+
 
 try:
     link = "http://suninjuly.github.io/get_attribute.html"
-    browser = webdriver.Chrome()
     browser.get(link)
+    def calc(x):
+        return str(math.log(abs(12*math.sin(int(x)))))
 
     x_element = browser.find_element(By.XPATH, "//img[@id='treasure']")
-
     box = x_element.get_attribute('valuex')
     sum = calc(box)
 
