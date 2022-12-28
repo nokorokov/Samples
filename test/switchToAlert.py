@@ -12,6 +12,7 @@ try:
     link = 'http://suninjuly.github.io/alert_accept.html'
     browser.get(link)
 
+
     #нажимаем на кнопку
     button1 = browser.find_element(By.TAG_NAME, 'button')
     button1.click()
