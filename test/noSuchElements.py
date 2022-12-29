@@ -17,9 +17,10 @@ try:
 
     time.sleep(1)
 
-    # Finding welcome-text, parsing text and checking it
+    # Finding welcome-text, parsing text and checking itgit
     welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
     welcome_text = welcome_text_elt.text
+    print(welcome_text)
     assert "Congratulations! You have successfully registered!" == welcome_text
 
 finally:
