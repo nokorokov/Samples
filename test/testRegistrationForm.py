@@ -2,6 +2,7 @@ from selenium import webdriver
 import unittest
 from selenium.webdriver.common.by import By
 
+
 class OneTest(unittest.TestCase):
     def test_reg1(self):
         browser = webdriver.Chrome()
@@ -16,7 +17,6 @@ class OneTest(unittest.TestCase):
         welcome_text = welcome_text_elt.text
 
         self.assertEqual('Congratulations! You have successfully registered!', welcome_text, "No, it`s wrong")
-
 
     def test_reg2(self):
         browser = webdriver.Chrome()
