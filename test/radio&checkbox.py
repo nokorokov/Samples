@@ -6,26 +6,28 @@ browser = webdriver.Chrome()
 
 
 try:
+    # Setting url link
     link = "https://suninjuly.github.io/math.html"
     browser.get(link)
+
+    # Calculate
     def calc(x):
         return str(math.log(abs(12*math.sin(int(x)))))
 
+    # Get text of calculating result
     x_element = browser.find_element(By.ID, "input_value")
     x = x_element.text
     sum = calc(x)
 
-    y = browser.find_element(By.ID, 'answer')
-    y.send_keys(sum)
+    # Finding input and send calc result
+    browser.find_element(By.ID, 'answer').send_keys(sum)
 
-    checkbox = browser.find_element(By.ID, "robotsRule")
-    checkbox.click()
+    # Finding checkbox and radio after click on them
+    browser.find_element(By.ID, "robotsRule").click()
+    browser.find_element(By.ID, "robotCheckbox").click()
 
-    radio = browser.find_element(By.ID, "robotCheckbox")
-    radio.click()
-
-    button = browser.find_element(By.CLASS_NAME, "btn.btn-default")
-    button.click()
+    # Finding send form button and click on it
+    browser.find_element(By.CLASS_NAME, "btn.btn-default").click()
 
 finally:
     time.sleep(10)
