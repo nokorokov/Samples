@@ -10,6 +10,11 @@ def browser():
     print("\nStart browser for test..")
     browser = webdriver.Chrome()
     return browser
+    #Финализатор
+    #yield browser
+    #этот код выполнится после завершения теста
+    #print("\nquit browser..")
+    #browser.quit()
 
 
 class TestMainPage1():
